@@ -1,0 +1,72 @@
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: var(--color-black);
+}
+
+.logo {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.clothes {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.b > img {
+  width: 70px;
+  height: 60px;
+}
+
+.btn_b > button{
+  background-color: var(--color-blue);
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  height: 50px;
+}
+
+.btn_y > button{
+  background-color: var(--color-yellow);
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  height: 50px;
+}
+
+.btn_p > button{
+  background-color: var(--color-pink);
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  height: 50px;
+}
+
+.list {
+  transform: translateX(83%);
+  width: 471px;
+}
+
+.list_ch {
+  margin-top: 15px;
+  border: solid var(--color-white);
+  border-radius: 7px;
+  background-color: var(--color-white);
+}
+
+.list_ch > img {
+  background-color: var(--color-white);
+  margin-left: 10px;
+  width: 43px;
+}
