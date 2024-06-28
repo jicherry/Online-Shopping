@@ -6,67 +6,105 @@
   --color-yellow: #fbbe28;
   --color-pink: #fd7f84;
   --color-light-grey: #dfdfdf;
+
+  /* size */
+  --size-button: 60px;
+  --base-space: 8px;
+  --size-border: 4px;
+  --font-size: 18px;
+  --size-thumbnail: 50px;
+
+  /* annimation */
+  --size-annimation-duration : 300ms;
 }
 
-* {
+
+/* * {
   box-sizing: border-box;
+} */
+
+
+body {
+  height: 100vh;
   background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  margin-top: 100px;
-  text-align: center;
+  cursor: pointer;
+  transition: transform var(--size-annimation-duration) ease;
 }
 
-.clothes {
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform var(--size-annimation-duration) ease;
+  margin-right: var(--base-space);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.buttons {
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  align-items: center;
 }
 
-.b > img {
-  width: 70px;
-  height: 60px;
+.imgBtn {
+  width: var(--size-button);
+  height: var(--size-button);
 }
 
-.btn_b > button{
+.colorBtn {
+  font-size: var(--font-size);
+  padding: calc(var(--base-space ) * 2);
+  border-radius: var(--size-border);
+}
+
+.blue {
   background-color: var(--color-blue);
-  border: none;
-  border-radius: 5px;
-  width: 70px;
-  height: 50px;
 }
 
-.btn_y > button{
+.yellow {
   background-color: var(--color-yellow);
-  border: none;
-  border-radius: 5px;
-  width: 70px;
-  height: 50px;
 }
 
-.btn_p > button{
+.pink {
   background-color: var(--color-pink);
-  border: none;
-  border-radius: 5px;
-  width: 70px;
-  height: 50px;
 }
 
-.list {
-  transform: translateX(83%);
-  width: 471px;
+.items {
+  width: 60%;
+  height: 60%;
+  list-style: none;
+  padding-left: 0;
+  overflow-y: scroll;
 }
 
-.list_ch {
-  margin-top: 15px;
-  border: solid var(--color-white);
-  border-radius: 7px;
+.item {
   background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  padding: var(--base-space);
+  margin-bottom: var(--base-space);
 }
 
-.list_ch > img {
-  background-color: var(--color-white);
-  margin-left: 10px;
-  width: 43px;
+.item__thumbnail {
+  width: var(--size-thumbnail);
+  height: (var(--size-thumbnail));
+}
+
+.item__description {
+  margin-left: var(--base-space);
+  font-size: var(--font-size);
 }
